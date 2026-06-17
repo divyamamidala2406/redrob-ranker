@@ -1,0 +1,87 @@
+# Redrob Hackathon — Submission Metadata
+# Team: Masakalithon
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "Masakalithon"
+
+primary_contact:
+  name: "Divya Bharathi Mamidala"
+  email: "divyamamidala.9652@gmail.com"       
+  phone: "+91-9652391677"        
+
+team_members:
+  - name: "Divya Bharathi Mamidala"
+    email: "divyamamidala.9652@gmail.com"
+    role: "Team Lead & ML Engineer"
+  
+  - name: "Parise Varshita"
+    email: "parisevarshita@gmail.com"
+    role: "Data Engineer"
+
+  - name: "Nitesh Kumar"
+    email: "niteshkumarbanduchoday@gmail.com"
+    role: "Backend Engineer"
+
+  - name: "Botta Inkita"
+    email: "inkitabotta@gmail.com"
+    role: "AI Research Engineer"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/divyamamidala2406/redrob-ranker"  
+sandbox_link: "https://redrob-ranker-z5pdqvghena3udtwipenj6.streamlit.app"                  
+
+reproduce_command: "python main.py --candidates ./data/candidates.jsonl --out ./outputs/submission.csv"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "Local CPU"
+  cpu_cores: 4
+  ram_gb: 16
+  python_version: "3.11"
+  os: "Ubuntu / Windows / macOS"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Claude"
+
+ai_usage_summary: |
+  Used Claude for architecture discussion and code review.
+  No candidate data was fed to any external LLM during ranking.
+  All scoring is deterministic rule-based logic running locally on CPU.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  Rule-based multi-factor ranker with explicit reasoning capture.
+  Six scoring components (skills, experience, career, behavior, education,
+  location) combined with a unique production-depth bonus score.
+  Skill component uses a four-factor trust model: must-have group coverage,
+  nice-to-have count, endorsement x duration trust, and Redrob platform
+  assessment scores. Eight trap detectors handle honeypots (overlapping job
+  dates, impossible YoE), keyword stuffers (unsupported high-value skill
+  claims), fake expertise (assessment score contradiction), pure consulting
+  backgrounds, and signal manipulation. Penalties applied as multipliers, not
+  additive, to prevent gaming. Runtime ~210s for 100K candidates on CPU.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
