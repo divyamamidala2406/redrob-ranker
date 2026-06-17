@@ -1,6 +1,6 @@
 # Redrob Hackathon — Intelligent Candidate Ranking Engine
 
-**Team:** Divya Bharathi Mamidala  
+**Team:** Masakalithon  
 **Track:** India.Runs AI & Datathon Arena — Track 1  
 **Challenge:** Intelligent Candidate Discovery & Ranking
 
