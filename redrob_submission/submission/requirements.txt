@@ -1,0 +1,19 @@
+# Redrob Hackathon — Intelligent Candidate Ranker
+# All CPU-only, no network required during ranking
+# Python 3.9+
+
+# No external ML dependencies required for the base ranker.
+# It is intentionally pure-stdlib + optional packages below.
+
+# Optional: faster JSON parsing (significant speedup on 100K candidates)
+# orjson>=3.9.0
+
+# Optional: progress bar
+tqdm>=4.65.0
+
+# Optional: for the Streamlit sandbox demo
+streamlit>=1.32.0
+
+# Optional: analytics / notebooks
+pandas>=2.0.0
+jupyterlab>=4.0.0
